@@ -22,6 +22,7 @@
     "web-vitals": "^2.1.0"
   },
   "scripts": {
+    "prepare": "husky install",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -31,7 +32,6 @@
     "lint": "eslint \"./src/**/*.+(js|jsx|ts|tsx)\"",
     "prettier": "prettier \"./src/**/*.+(js|jsx|ts|tsx|json|yml|yaml|md|mdx)\"",
     "validate": "yarn lint && npm run prettier -- --check && tsc --skipLibCheck",
-    "prepare": "husky install",
     "release": "standard-version --skip.tag --no-verify --release-as minor"
   },
   "config": {
@@ -96,7 +96,7 @@
     "eslint-plugin-react-hooks": "^4.2.0",
     "husky": "^7.0.1",
     "lint-staged": "^11.1.2",
-    "prettier": "^2.3.2",
-    "standard-version": "^9.3.1"
+    "standard-version": "^9.3.1",
+    "prettier": "^2.3.2"
   }
 }
