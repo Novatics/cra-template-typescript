@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App should take a snapshot 1`] = `
+<DocumentFragment>
+  <header
+    class="Ps-MuiPaper-root Ps-MuiAppBar-root Ps-MuiAppBar-positionFixed Ps-MuiAppBar-colorDefault mui-fixed Ps-MuiPaper-elevation1"
+    style="display: none;"
+  >
+    <div
+      class="Ps-MuiToolbar-root Ps-MuiToolbar-regular Ps-MuiToolbar-gutters"
+    >
+      <a
+        href="/"
+      />
+    </div>
+  </header>
+  <div
+    class="Ps-MuiBox-root Ps-MuiBox-root-1"
+    style="display: none;"
+  />
+  <div
+    class="Ps-MuiBox-root Ps-MuiBox-root-2"
+  >
+    <div
+      class="Ps-MuiCircularProgress-root Ps-MuiCircularProgress-colorPrimary Ps-MuiCircularProgress-indeterminate"
+      role="progressbar"
+      style="width: 40px; height: 40px;"
+    >
+      <svg
+        class="Ps-MuiCircularProgress-svg"
+        viewBox="22 22 44 44"
+      >
+        <circle
+          class="Ps-MuiCircularProgress-circle Ps-MuiCircularProgress-circleIndeterminate"
+          cx="44"
+          cy="44"
+          fill="none"
+          r="20.2"
+          stroke-width="3.6"
+        />
+      </svg>
+    </div>
+  </div>
+</DocumentFragment>
+`;
