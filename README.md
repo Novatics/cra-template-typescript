@@ -10,7 +10,7 @@
 ## ✨ Instalação e execução
 
 ```sh
-git clone git@gitlab.luizalabs.com:luizalabs/plataforma-seller/maas-cra-template-typescript.git
+https://github.com/Novatics/cra-template-typescript.git
 ```
 
 Na raiz do projeto são fornecidos alguns comandos integrados:
@@ -121,7 +121,6 @@ Nossa estrutura de pastas se organiza dessa forma:
 - [CommitLint](https://commitlint.js.org)
 - [Conventional Commits](https://www.conventionalcommits.org)
 - [Material UI](https://material-ui.com)
-- [Maas Components](https://maas-components.luizalabs.com)
 
 ## 👍 Merge Requests
 

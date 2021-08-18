@@ -5,11 +5,7 @@ interface CenterProps {
 }
 
 const Center = ({ children }: CenterProps) => {
-  return (
-    <div>
-      {children}
-    </div>
-  );
+  return <div>{children}</div>;
 };
 
 export default Center;
