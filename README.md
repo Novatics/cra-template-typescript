@@ -120,7 +120,6 @@ Nossa estrutura de pastas se organiza dessa forma:
 - [ESLint](https://eslint.org/docs/user-guide/getting-started)
 - [CommitLint](https://commitlint.js.org)
 - [Conventional Commits](https://www.conventionalcommits.org)
-- [Material UI](https://material-ui.com)
 
 ## 👍 Merge Requests
 
