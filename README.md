@@ -80,19 +80,11 @@ Para executar os linting:
 Nossa estrutura de pastas se organiza dessa forma:
 
 ```
-├─ .gitlab/
-│  ├─ ci/
-│  │  └─ .gitlab-ci-common.yml      # Configuração dos pipelines para o CI do gitlab
-│  │  └─ .gitlab-ci-production.yml  # Configuração dos pipelines para o CI do gitlab
-│  │  └─ .gitlab-ci-staging.yml     # Configuração dos pipelines para o CI do gitlab
+
 ├─ public/
 │  ├─ favicon.ico                   # Ícone exibido no browser
 │  ├─ index.html                    # Index base do projeto
 │  └─ manifest.json                 # Arquivo de metadados para o browser
-├─ scripts/
-│  ├─ deploy-production.sh          # Script para deploy em produção (desejável)
-│  ├─ deploy-staging.sh             # Script para deploy em staging (desejável)
-│  ├─ npm-registry.sh               # Script para configuração do yarn registry
 ├─ src/
 │  ├─ assets/
 │  │  └─ images/                    # Imagens do projeto
@@ -112,7 +104,6 @@ Nossa estrutura de pastas se organiza dessa forma:
 ├─ .env.staging                     # Váriaveis de ambiente
 ├─ .eslintrc.js                     # Preferências do ESlint
 ├─ .gitignore                       # Lista de arquivos para serem ignorados pelo git
-├─ .gitlab-ci.yml                   # Configuração dos pipelines para o CI do gitlab
 ├─ commitlint.config.js             # Configuração das mensagens de commit
 ├─ dependency.yaml                  # Configuração para a GMUD automática
 ├─ lint-staged.config.js            # Configuração dos comandos para tarefas automatizadas
