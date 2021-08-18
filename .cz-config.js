@@ -1,32 +1,38 @@
 module.exports = {
   types: [
-    { value: 'feat', name: 'feat: A new feature' },
-    { value: 'fix', name: 'fix: A bug fix' },
-    { value: 'docs', name: 'docs: Documentation only changes' },
+    { value: 'feat', name: 'feat:     A new feature' },
+    { value: 'fix', name: 'fix:      A bug fix' },
+    { value: 'docs', name: 'docs:     Documentation only changes' },
     {
       value: 'style',
-      name: 'style: changes that do not affect the meaning of the code (blank space, formatting, missing semicolon, etc)'
+      name: 'style:    Changes that do not affect the meaning of the code\n            (white-space, formatting, missing semi-colons, etc)'
     },
     {
       value: 'refactor',
-      name: 'refactor: a code change that does not fix a bug or add a feature'
+      name: 'refactor: A code change that neither fixes a bug nor adds a feature.'
     },
-    { value: 'test', name: 'test: Adding missing tests' },
+    {
+      value: 'perf',
+      name: 'perf:     A code change that improves performance'
+    },
+    { value: 'test', name: 'test:     Adding missing tests' },
     {
       value: 'chore',
-      name: 'chore: Changes in the build process or auxiliary tools and libraries, such as documentation generation'
+      name: 'chore:    Changes to the build process or auxiliary tools\n            and libraries such as documentation generation'
     },
-    { value: 'WIP', name: 'WIP: Work in progress' }
+    { value: 'revert', name: 'revert:   Revert to a commit' },
+    { value: 'wip', name: 'WIP:      Work in progress' }
   ],
+
   scopes: [
-    { name: 'projeto' },
-    { name: 'integração' },
-    { name: 'rotas' },
-    { name: 'páginas' },
-    { name: 'container' },
+    { name: 'project' },
+    { name: 'store' },
+    { name: 'pages' },
+    { name: 'redux' },
     { name: 'components' },
-    { name: 'common' },
-    { name: 'assets' }
+    { name: 'constants' },
+    { name: 'services' },
+    { name: 'styles' }
   ],
 
   allowTicketNumber: false,
@@ -34,16 +40,28 @@ module.exports = {
   ticketNumberPrefix: 'TICKET-',
   ticketNumberRegExp: '\\d{1,5}',
 
+  // it needs to match the value for field type. Eg.: 'fix'
+  /*
+  scopeOverrides: {
+    fix: [
+      {name: 'merge'},
+      {name: 'style'},
+      {name: 'e2eTest'},
+      {name: 'unitTest'}
+    ]
+  },
+  */
   // override the messages, defaults are as follows
   messages: {
-    type: 'Selecione o tipo de mudança que você está commitando:',
-    scope: '\nSelecione o SCOPE do commit:',
-    customScope: 'Selecione o SCOPE do commit:',
-    subject: 'Escreva uma descrição breve e IMPERATIVA da mudança:\n',
+    type: "Select the type of change that you're committing:",
+    scope: '\nDenote the SCOPE of this change (optional):',
+    // used if allowCustomScopes is true
+    customScope: 'Denote the SCOPE of this change:',
+    subject: 'Write a SHORT, IMPERATIVE tense description of the change:\n',
     body: 'Provide a LONGER description of the change (optional). Use "|" to break new line:\n',
-    breaking: 'Existe BREAKING CHANGES (optional):\n',
-    footer: 'ISSUES resolvidas (optional). E.x.: #31, #34:\n',
-    confirmCommit: 'Confirmar commit acima?'
+    breaking: 'List any BREAKING CHANGES (optional):\n',
+    footer: 'List any ISSUES CLOSED by this change (optional). E.g.: #31, #34:\n',
+    confirmCommit: 'Are you sure you want to proceed with the commit above?'
   },
 
   allowCustomScopes: true,
@@ -52,6 +70,8 @@ module.exports = {
   skipQuestions: ['body'],
 
   // limit subject length
-  subjectLimit: 100,
-  maxHeaderWidth: '72'
+  subjectLimit: 100
+  // breaklineChar: '|', // It is supported for fields body and footer.
+  // footerPrefix : 'ISSUES CLOSED:'
+  // askForBreakingChangeFirst : true, // default is false
 };
