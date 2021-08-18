@@ -1,7 +1,7 @@
-import { ReactNode } from 'react';
+import React, { ReactNode } from 'react';
 
 interface CenterProps {
-  children?: ReactNode;
+  children: ReactNode;
 }
 
 const Center = ({ children }: CenterProps) => {

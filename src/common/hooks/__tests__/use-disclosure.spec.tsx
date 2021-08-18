@@ -12,9 +12,9 @@ describe('useToggle hook', () => {
     return (
       <>
         <p>Value: {activeText}</p>
-        <button type="button" data-testid="toggle" onClick={onToggle} />
-        <button type="button" data-testid="forceTrue" onClick={setTrue} />
-        <button type="button" data-testid="forceFalse" onClick={setFalse} />
+        <button type="button" data-testid="toggle" aria-label="toggle" onClick={onToggle} />
+        <button type="button" data-testid="forceTrue" aria-label="forceTrue" onClick={setTrue} />
+        <button type="button" data-testid="forceFalse" aria-label="forceFalse" onClick={setFalse} />
       </>
     );
   }

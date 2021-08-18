@@ -1,9 +1,8 @@
-import React from 'react';
+import 'common/css/fonts.css';
 import ReactDOM from 'react-dom';
+import 'reset-css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import 'reset-css';
-import 'common/css/fonts.css';
 
 ReactDOM.render(<App />, document.getElementById('root'));
 

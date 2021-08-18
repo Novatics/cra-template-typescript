@@ -12,7 +12,9 @@ const NotFound: React.FC = () => {
     <>
       <h1>{t('error.404.page-not-found')}</h1>
       <h2>{t('error.404.sorry-we-could-not-find-it')}</h2>
-      <button onClick={handleGoHome}>{t('error.404.back-to-home')}</button>
+      <button type="button" onClick={handleGoHome}>
+        {t('error.404.back-to-home')}
+      </button>
     </>
   );
 };

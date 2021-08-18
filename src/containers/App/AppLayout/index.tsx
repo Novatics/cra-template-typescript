@@ -1,4 +1,3 @@
-import React from 'react';
 import AppHeader from '../AppHeader';
 
 export interface AppLayoutProps {
@@ -6,10 +5,11 @@ export interface AppLayoutProps {
 }
 
 const AppLayout: React.FC<AppLayoutProps> = (props: AppLayoutProps) => {
+  const { children } = props;
   return (
     <>
       <AppHeader />
-      {props.children}
+      {children}
     </>
   );
 };

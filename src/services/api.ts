@@ -5,8 +5,8 @@ const api = axios.create({
   baseURL: API_URL
 });
 
-api.defaults.headers.common['Accept'] = 'application/json';
+api.defaults.headers.common.Accept = 'application/json';
 api.defaults.headers.common['Content-Type'] = 'application/json';
-api.defaults.headers.common['credentials'] = 'include';
+api.defaults.headers.common.credentials = 'include';
 
 export default api;

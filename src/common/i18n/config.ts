@@ -10,7 +10,7 @@ const languages = {
 
 type Language = keyof typeof languages;
 
-void i18n.use(initReactI18next).init({
+i18n.use(initReactI18next).init({
   fallbackLng: 'pt-BR',
   whitelist: ['pt-BR'],
   load: 'currentOnly',

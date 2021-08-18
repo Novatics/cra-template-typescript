@@ -11,7 +11,12 @@ describe('usePrevious hook', () => {
       <>
         <p data-testid="previous-value">{previousValue}</p>
         <p data-testid="current-value">{value}</p>
-        <button type="button" data-testid="add-button" onClick={() => setValue(value + 1)} />
+        <button
+          type="button"
+          data-testid="add-button"
+          aria-label="add-button"
+          onClick={() => setValue(value + 1)}
+        />
       </>
     );
   }

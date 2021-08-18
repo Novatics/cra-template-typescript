@@ -1,6 +1,5 @@
-import React from 'react';
-import { Link as LinkRouter } from 'react-router-dom';
 import { ReactComponent as Logo } from 'assets/images/logo.svg';
+import { Link as LinkRouter } from 'react-router-dom';
 import { Container } from './styles';
 
 const AppHeader = () => {
