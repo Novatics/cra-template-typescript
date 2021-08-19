@@ -2,43 +2,48 @@
 
 exports[`App should take a snapshot 1`] = `
 <DocumentFragment>
-  <header
-    class="Ps-MuiPaper-root Ps-MuiAppBar-root Ps-MuiAppBar-positionFixed Ps-MuiAppBar-colorDefault mui-fixed Ps-MuiPaper-elevation1"
+  .c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 60px;
+  background-color: #371c9d;
+}
+
+<div
+    class="c0"
     style="display: none;"
   >
-    <div
-      class="Ps-MuiToolbar-root Ps-MuiToolbar-regular Ps-MuiToolbar-gutters"
-    >
-      <a
-        href="/"
-      />
-    </div>
-  </header>
-  <div
-    class="Ps-MuiBox-root Ps-MuiBox-root-1"
-    style="display: none;"
-  />
-  <div
-    class="Ps-MuiBox-root Ps-MuiBox-root-2"
-  >
-    <div
-      class="Ps-MuiCircularProgress-root Ps-MuiCircularProgress-colorPrimary Ps-MuiCircularProgress-indeterminate"
-      role="progressbar"
-      style="width: 40px; height: 40px;"
+    <a
+      href="/"
     >
       <svg
-        class="Ps-MuiCircularProgress-svg"
-        viewBox="22 22 44 44"
+        width="160"
       >
-        <circle
-          class="Ps-MuiCircularProgress-circle Ps-MuiCircularProgress-circleIndeterminate"
-          cx="44"
-          cy="44"
-          fill="none"
-          r="20.2"
-          stroke-width="3.6"
-        />
+        logo.svg
       </svg>
+    </a>
+  </div>
+  <div
+    class="container"
+  >
+    <div
+      class="spinner"
+    >
+      <div
+        class="cube1"
+      />
+      <div
+        class="cube2"
+      />
     </div>
   </div>
 </DocumentFragment>

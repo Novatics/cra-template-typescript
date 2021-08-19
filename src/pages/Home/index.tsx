@@ -7,7 +7,7 @@ const Home: React.FC = () => {
 
   return (
     <StyledContainer>
-      <StyledTitle>Cra Template Typescript</StyledTitle>
+      <StyledTitle>{t('home.title')}</StyledTitle>
       <StyledSubtitle>{t('home.subtitle')}</StyledSubtitle>
     </StyledContainer>
   );

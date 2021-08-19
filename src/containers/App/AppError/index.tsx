@@ -1,4 +1,4 @@
-import i18n from 'common/i18n/config';
+import i18n from 'common/i18n';
 import { ErrorBoundary, FallbackProps } from 'react-error-boundary';
 
 export interface AppErrorProps {
