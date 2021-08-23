@@ -24,7 +24,11 @@ module.exports = {
     project: './tsconfig.json'
   },
   rules: {
-    'react/jsx-filename-extension': [WARNING, { extensions: ['.ts', '.tsx', '.d.ts'] }], //should add ".ts" if typescript project
+    'react/jsx-filename-extension': [
+      WARNING,
+      { extensions: ['.ts', '.tsx', 'js', 'jsx', '.d.ts'] }
+    ], //should add ".ts" if typescript project
+    'react/jsx-props-no-spreading': OFF,
     'react/react-in-jsx-scope': OFF,
     'space-infix-ops': ERROR,
     'prefer-spread': ERROR,
@@ -32,13 +36,14 @@ module.exports = {
     'class-methods-use-this': WARNING,
     'arrow-parens': [ERROR, 'as-needed'],
     'import/prefer-default-export': OFF,
+    'consistent-return': OFF,
     '@typescript-eslint/no-unused-vars': ERROR,
-    '@typescript-eslint/no-explicit-any': OFF,
-    '@typescript-eslint/explicit-function-return-type': OFF,
+    '@typescript-eslint/no-explicit-any': WARNING,
+    '@typescript-eslint/explicit-function-return-type': ERROR,
     '@typescript-eslint/explicit-member-accessibility': OFF,
     '@typescript-eslint/no-namespace': OFF,
     '@typescript-eslint/explicit-module-boundary-types': OFF,
-    'import/no-unresolved': 'error',
+    'import/no-unresolved': 2,
     'max-lines': [
       'error',
       {
@@ -50,19 +55,27 @@ module.exports = {
     'no-var': 'error',
     quotes: [ERROR, 'single'],
     semi: [ERROR, 'always'],
-    complexity: ['error', 3]
+    complexity: ['error', 5],
+    'import/extensions': [
+      'error',
+      'ignorePackages',
+      {
+        js: 'never',
+        jsx: 'never',
+        ts: 'never',
+        tsx: 'never'
+      }
+    ]
   },
   settings: {
     react: {
       version: 'detect'
     },
     'import/parsers': {
-      '@typescript-eslint/parser': ['.ts', '.tsx']
+      '@typescript-eslint/parser': ['.ts', '.tsx', '.jsx', '.js']
     },
     'import/resolver': {
       typescript: {
-        alwaysTryTypes: true, // always try to resolve types under `<root>@types` directory even it doesn't contain any source code, like `@types/unist`
-        // use <root>/path/to/folder/tsconfig.json
         project: './tsconfig.json',
         node: {
           paths: ['src'],

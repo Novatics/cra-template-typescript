@@ -7,7 +7,7 @@ export interface AppErrorProps {
 
 const AppError: React.FC<AppErrorProps> = (props: AppErrorProps) => {
   const { children } = props;
-  function ErrorFallback({ error, resetErrorBoundary }: FallbackProps) {
+  function ErrorFallback({ error, resetErrorBoundary }: FallbackProps): React.ReactElement {
     return (
       <div>
         <h1>{i18n.t('error.boundary.somethings-wrong')}</h1>

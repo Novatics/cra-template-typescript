@@ -1,9 +1,9 @@
+import { fireEvent, render, screen } from '@testing-library/react';
 import React, { useState } from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
 import usePrevious from '../use-previous';
 
 describe('usePrevious hook', () => {
-  function MockComponent() {
+  function MockComponent(): React.ReactElement {
     const [value, setValue] = useState(1);
     const previousValue = usePrevious(value);
 
@@ -15,7 +15,7 @@ describe('usePrevious hook', () => {
           type="button"
           data-testid="add-button"
           aria-label="add-button"
-          onClick={() => setValue(value + 1)}
+          onClick={(): void => setValue(value + 1)}
         />
       </>
     );

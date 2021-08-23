@@ -1,14 +1,15 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { render, RenderOptions } from '@testing-library/react';
 import i18n from 'common/i18n/index';
 import AppTheme from 'containers/App/AppTheme';
-import React, { FunctionComponent, JSXElementConstructor, ReactElement } from 'react';
+import React, { JSXElementConstructor, ReactElement } from 'react';
 import { I18nextProvider } from 'react-i18next';
 
 type AllTheProvidersProps = {
   children: ReactElement<any, string | JSXElementConstructor<any>>;
 };
 
-const AllTheProviders: FunctionComponent<any> = ({ children }: AllTheProvidersProps) => {
+const AllTheProviders: React.FC<any> = ({ children }: AllTheProvidersProps) => {
   return (
     <I18nextProvider i18n={i18n}>
       <AppTheme>{children}</AppTheme>
@@ -16,7 +17,7 @@ const AllTheProviders: FunctionComponent<any> = ({ children }: AllTheProvidersPr
   );
 };
 
-const customRender = (ui: ReactElement, options?: Omit<RenderOptions, 'wrapper'>) =>
+const customRender = (ui: ReactElement, options?: Omit<RenderOptions, 'wrapper'>): any =>
   render(ui, { wrapper: AllTheProviders, ...options });
 
 export * from '@testing-library/react';

@@ -1,6 +1,6 @@
-import { ThemeProps } from './type';
+import { CustomThemeProps } from './type';
 
-const Theme: ThemeProps = {
+const Theme: CustomThemeProps = {
   fonts: ['Work Sans', 'sans-serif', 'Roboto'],
   fontSizes: {
     xsmall: '0.75em',

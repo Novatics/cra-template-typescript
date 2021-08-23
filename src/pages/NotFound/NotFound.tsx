@@ -6,7 +6,7 @@ const NotFound: React.FC = () => {
   const { t } = useTranslation();
   const history = useHistory();
 
-  const handleGoHome = () => history.push('/');
+  const handleGoHome = (): void => history.push('/');
 
   return (
     <>

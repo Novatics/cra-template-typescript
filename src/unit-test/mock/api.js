@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
 import Api from 'services/api';
 
 jest.mock('services/api', () => ({

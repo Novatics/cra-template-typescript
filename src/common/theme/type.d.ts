@@ -1,4 +1,4 @@
-export type ThemeProps = {
+export type CustomThemeProps = {
   fonts: string[];
   fontSizes: {
     xsmall: string;

@@ -2,7 +2,7 @@ import { ReactComponent as Logo } from 'assets/images/logo.svg';
 import { Link as LinkRouter } from 'react-router-dom';
 import { Container } from './styles';
 
-const AppHeader = () => {
+const AppHeader: React.FC = () => {
   return (
     <Container>
       <LinkRouter to="/">
