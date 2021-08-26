@@ -23,6 +23,7 @@
   },
   "include": [
     "src/**/*",
-    "src/unit-test/*"
+    "src/unit-test/*",
+    ".eslintrc.js"
   ]
 }

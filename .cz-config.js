@@ -41,15 +41,16 @@ module.exports = {
       name: 'Work in progress'
     }
   ],
+  // Neste local adicionar os contextos da aplicação: Cadastro, Usuário e etc..
   scopes: [
     { name: 'project' },
-    { name: 'store' },
-    { name: 'pages' },
-    { name: 'redux' },
-    { name: 'components' },
-    { name: 'constants' },
-    { name: 'services' },
-    { name: 'styles' }
+    { name: 'login' },
+    { name: 'register' },
+    { name: 'auth' },
+    { name: 'services' }
   ],
-  subjectLimit: 100
+  subjectLimit: 100,
+  allowCustomScopes: true,
+  subjectLimit: 100,
+  maxHeaderWidth: '72'
 };
