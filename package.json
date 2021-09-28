@@ -1,5 +1,5 @@
 {
-  "name": "maas-cra-template-typescript",
+  "name": "cra-template-typescript",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

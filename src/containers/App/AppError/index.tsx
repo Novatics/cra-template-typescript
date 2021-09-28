@@ -1,11 +1,7 @@
 import i18n from 'common/i18n';
 import { ErrorBoundary, FallbackProps } from 'react-error-boundary';
 
-export interface AppErrorProps {
-  children: JSX.Element;
-}
-
-const AppError: React.FC<AppErrorProps> = (props: AppErrorProps) => {
+const AppError: React.FC = props => {
   const { children } = props;
   function ErrorFallback({ error, resetErrorBoundary }: FallbackProps): React.ReactElement {
     return (
