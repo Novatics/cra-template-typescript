@@ -3,7 +3,7 @@ import { ErrorBoundary, FallbackProps } from 'react-error-boundary';
 
 const AppError: React.FC = props => {
   const { children } = props;
-  function ErrorFallback({ error, resetErrorBoundary }: FallbackProps): React.ReactElement {
+  const ErrorFallback = ({ error, resetErrorBoundary }: FallbackProps): React.ReactElement => {
     return (
       <div>
         <h1>{i18n.t('error.boundary.somethings-wrong')}</h1>
@@ -13,7 +13,7 @@ const AppError: React.FC = props => {
         </button>
       </div>
     );
-  }
+  };
 
   return <ErrorBoundary FallbackComponent={ErrorFallback}>{children}</ErrorBoundary>;
 };
