@@ -1,24 +1,19 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { render, RenderOptions } from '@testing-library/react';
-import i18n from 'common/i18n/index';
-import AppTheme from 'containers/App/AppTheme';
-import React, { JSXElementConstructor, ReactElement } from 'react';
-import { I18nextProvider } from 'react-i18next';
+/* eslint-disable import/no-extraneous-dependencies */
+import { ReactElement } from 'react'
+import { render, RenderOptions } from '@testing-library/react'
+import AppTheme from 'containers/App/AppTheme'
 
-type AllTheProvidersProps = {
-  children: ReactElement<any, string | JSXElementConstructor<any>>;
-};
+type TAllTheProvidersProps = {
+  children: React.ReactElement
+}
 
-const AllTheProviders: React.FC<any> = ({ children }: AllTheProvidersProps) => {
-  return (
-    <I18nextProvider i18n={i18n}>
-      <AppTheme>{children}</AppTheme>
-    </I18nextProvider>
-  );
-};
+const AllTheProviders = ({ children }: TAllTheProvidersProps) => {
+  return <AppTheme>{children}</AppTheme>
+}
 
 const customRender = (ui: ReactElement, options?: Omit<RenderOptions, 'wrapper'>): any =>
-  render(ui, { wrapper: AllTheProviders, ...options });
+  render(ui, { wrapper: AllTheProviders, ...options })
 
-export * from '@testing-library/react';
-export { customRender as render };
+export * from '@testing-library/react'
+export { customRender as render }

@@ -1,15 +1,15 @@
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
-import axios from 'axios';
+import axios from 'axios'
 
-jest.mock('axios');
+jest.mock('axios')
 
 const functionize = (obj, func) => {
-  const out = func;
+  const out = func
   Object.entries(obj).forEach(([key, value]) => {
-    out[key] = value;
-  });
-  return out;
-};
+    out[key] = value
+  })
+  return out
+}
 
 const axiosApi = functionize(
   {
@@ -17,30 +17,30 @@ const axiosApi = functionize(
     headers: {},
     interceptors: {
       request: {
-        use: middleware => middleware({ headers: {} })
+        use: middleware => middleware({ headers: {} }),
       },
       response: {
         use: (_, middleware) =>
           middleware({
-            response: { data: { message: '' } }
-          })
-      }
-    }
+            response: { data: { message: '' } },
+          }),
+      },
+    },
   },
   jest.fn()
-);
+)
 
-axios.create.mockImplementation(() => axiosApi);
-axios.get.mockImplementation(() => Promise.resolve({ data: {} }));
+axios.create.mockImplementation(() => axiosApi)
+axios.get.mockImplementation(() => Promise.resolve({ data: {} }))
 
 const mockRejectResp = data => {
-  axiosApi.mockRejectedValue(data);
-  return data;
-};
+  axiosApi.mockRejectedValue(data)
+  return data
+}
 
 const mockResolveResp = data => {
-  axiosApi.mockResolvedValue(data);
-  return data;
-};
+  axiosApi.mockResolvedValue(data)
+  return data
+}
 
-export { mockRejectResp, mockResolveResp };
+export { mockRejectResp, mockResolveResp }

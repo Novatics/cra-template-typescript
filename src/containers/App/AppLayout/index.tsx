@@ -1,13 +1,16 @@
-import AppHeader from '../AppHeader';
+import AppHeader from '../AppHeader'
 
-const AppLayout: React.FC = props => {
-  const { children } = props;
+type TAppLayoutProps = {
+  children: React.ReactNode
+}
+
+const AppLayout = ({ children }: TAppLayoutProps) => {
   return (
     <>
       <AppHeader />
       {children}
     </>
-  );
-};
+  )
+}
 
-export default AppLayout;
+export default AppLayout

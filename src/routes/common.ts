@@ -1,13 +1,13 @@
-import { lazy } from 'react';
+import { lazy } from 'react'
 
-const NotFound = lazy(() => import('pages/NotFound'));
+const NotFound = lazy(() => import('pages/NotFound'))
 
 const common = [
   {
     path: '*',
     component: NotFound,
-    exact: false
-  }
-];
+    exact: false,
+  },
+]
 
-export default common;
+export default common

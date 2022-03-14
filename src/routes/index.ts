@@ -1,6 +1,6 @@
-import Home from './home';
-import Common from './common';
+import Common from './common'
+import Home from './home'
 
-const routes = [...Home, ...Common];
+const routes = [...Home, ...Common]
 
-export default routes;
+export default routes

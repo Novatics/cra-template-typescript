@@ -1,6 +1,6 @@
-import { ReactComponent as Logo } from 'assets/images/logo.svg';
-import { Link as LinkRouter } from 'react-router-dom';
-import { Container } from './styles';
+import { Link as LinkRouter } from 'react-router-dom'
+import { ReactComponent as Logo } from 'assets/images/logo.svg'
+import { Container } from './styles'
 
 const AppHeader: React.FC = () => {
   return (
@@ -9,7 +9,7 @@ const AppHeader: React.FC = () => {
         <Logo width="160" />
       </LinkRouter>
     </Container>
-  );
-};
+  )
+}
 
-export default AppHeader;
+export default AppHeader

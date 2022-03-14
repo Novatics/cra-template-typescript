@@ -1,22 +1,19 @@
-import React from 'react';
-import { useTranslation } from 'react-i18next';
-import { useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom'
 
-const NotFound: React.FC = () => {
-  const { t } = useTranslation();
-  const history = useHistory();
+const NotFound = () => {
+  const history = useHistory()
 
-  const handleGoHome = (): void => history.push('/');
+  const handleGoHome = (): void => history.push('/')
 
   return (
     <>
-      <h1>{t('error.404.page-not-found')}</h1>
-      <h2>{t('error.404.sorry-we-could-not-find-it')}</h2>
+      <h1>Página não encontrada</h1>
+      <h2>Não conseguimos encontrar uma rota para esta página</h2>
       <button type="button" onClick={handleGoHome}>
-        {t('error.404.back-to-home')}
+        Voltar para a home
       </button>
     </>
-  );
-};
+  )
+}
 
-export default NotFound;
+export default NotFound

@@ -1,32 +1,32 @@
-export type CustomThemeProps = {
-  fonts: string[];
+export type TCustomThemeProps = {
+  fonts: string[]
   fontSizes: {
-    xsmall: string;
-    small: string;
-    normal: string;
-    medium: string;
-    large: string;
-    xlarge: string;
-  };
+    xsmall: string
+    small: string
+    normal: string
+    medium: string
+    large: string
+    xlarge: string
+  }
   spaces: {
-    xsmall: string;
-    small: string;
-    normal: string;
-    medium: string;
-    large: string;
-    xlarge: string;
-  };
+    xsmall: string
+    small: string
+    normal: string
+    medium: string
+    large: string
+    xlarge: string
+  }
   colors: {
     text: {
-      primary: string;
-      secondary: string;
-    };
+      primary: string
+      secondary: string
+    }
     bg: {
-      darker: string;
-      dark: string;
-    };
+      darker: string
+      dark: string
+    }
     border: {
-      dark: string;
-    };
-  };
-};
+      dark: string
+    }
+  }
+}

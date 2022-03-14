@@ -1,19 +1,15 @@
-import Center from 'components/Center';
-import React from 'react';
-import { useTranslation } from 'react-i18next';
-import { StyledContainer, StyledSubtitle, StyledTitle } from './styles';
+import Center from 'components/Center'
+import { StyledContainer, StyledSubtitle, StyledTitle } from './styles'
 
-const Home: React.FC = () => {
-  const { t } = useTranslation();
-
+const Home = () => {
   return (
     <StyledContainer>
       <Center>
-        <StyledTitle>{t('home.title')}</StyledTitle>
-        <StyledSubtitle>{t('home.subtitle')}</StyledSubtitle>
+        <StyledTitle>Bem vindo.</StyledTitle>
+        <StyledSubtitle>Boilerplate Novatics</StyledSubtitle>
       </Center>
     </StyledContainer>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home

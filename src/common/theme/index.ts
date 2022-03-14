@@ -1,6 +1,6 @@
-import { CustomThemeProps } from './type';
+import { TCustomThemeProps } from './type'
 
-const Theme: CustomThemeProps = {
+const Theme: TCustomThemeProps = {
   fonts: ['Work Sans', 'sans-serif', 'Roboto'],
   fontSizes: {
     xsmall: '0.75em',
@@ -8,7 +8,7 @@ const Theme: CustomThemeProps = {
     normal: '1.2rem',
     medium: '2em',
     large: '2.2em',
-    xlarge: '2.5em'
+    xlarge: '2.5em',
   },
   spaces: {
     xsmall: '0.2em',
@@ -16,21 +16,21 @@ const Theme: CustomThemeProps = {
     normal: '0.7em',
     medium: '1em',
     large: '2em',
-    xlarge: '2.5em'
+    xlarge: '2.5em',
   },
   colors: {
     text: {
       primary: '#eeeeee',
-      secondary: '#b9b9b9'
+      secondary: '#b9b9b9',
     },
     bg: {
       darker: '#371c9d',
-      dark: '#371c9d'
+      dark: '#371c9d',
     },
     border: {
-      dark: '#4b4a4a'
-    }
-  }
-};
+      dark: '#4b4a4a',
+    },
+  },
+}
 
-export default Theme;
+export default Theme

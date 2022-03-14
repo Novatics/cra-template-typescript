@@ -1,11 +1,11 @@
-import { fireEvent, render, screen } from '@testing-library/react';
-import React, { useState } from 'react';
-import usePrevious from '../use-previous';
+import { useState } from 'react'
+import { fireEvent, render, screen } from '@testing-library/react'
+import usePrevious from '../use-previous'
 
 describe('usePrevious hook', () => {
   function MockComponent(): React.ReactElement {
-    const [value, setValue] = useState(1);
-    const previousValue = usePrevious(value);
+    const [value, setValue] = useState(1)
+    const previousValue = usePrevious(value)
 
     return (
       <>
@@ -18,20 +18,20 @@ describe('usePrevious hook', () => {
           onClick={(): void => setValue(value + 1)}
         />
       </>
-    );
+    )
   }
 
   it('should be able the usePrevious hook store previous value', () => {
-    render(<MockComponent />);
+    render(<MockComponent />)
 
-    expect(screen.getByTestId('previous-value')).toBeEmptyDOMElement();
-    expect(screen.getByTestId('current-value').textContent).toBe('1');
+    expect(screen.getByTestId('previous-value')).toBeEmptyDOMElement()
+    expect(screen.getByTestId('current-value').textContent).toBe('1')
 
-    const addButton = screen.getByTestId('add-button');
+    const addButton = screen.getByTestId('add-button')
 
-    fireEvent.click(addButton);
+    fireEvent.click(addButton)
 
-    expect(screen.getByTestId('previous-value').textContent).toBe('1');
-    expect(screen.getByTestId('current-value').textContent).toBe('2');
-  });
-});
+    expect(screen.getByTestId('previous-value').textContent).toBe('1')
+    expect(screen.getByTestId('current-value').textContent).toBe('2')
+  })
+})

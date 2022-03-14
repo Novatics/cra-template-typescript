@@ -1,20 +1,20 @@
-import api from '../api';
-import * as Services from '../health';
+import api from '../api'
+import * as Services from '../health'
 
-const mockFn = jest.fn();
+const mockFn = jest.fn()
 
 describe('fetchData', () => {
   it('fetches successfully data from an health', async () => {
     const data = {
       data: {
-        status: 'OK'
-      }
-    };
+        status: 'OK',
+      },
+    }
 
-    api.get = mockFn.mockResolvedValueOnce(data);
+    api.get = mockFn.mockResolvedValueOnce(data)
 
-    await expect(Services.check()).resolves.toEqual(data);
+    await expect(Services.check()).resolves.toEqual(data)
 
-    expect(mockFn).toHaveBeenCalledWith('/health');
-  });
-});
+    expect(mockFn).toHaveBeenCalledWith('/health')
+  })
+})

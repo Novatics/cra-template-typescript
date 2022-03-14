@@ -1,6 +1,6 @@
-import './styles.css';
+import './styles.css'
 
-const AppLoading: React.FC = () => {
+const AppLoading = () => {
   return (
     <div className="container">
       <div className="spinner">
@@ -8,7 +8,7 @@ const AppLoading: React.FC = () => {
         <div className="cube2" />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default AppLoading;
+export default AppLoading

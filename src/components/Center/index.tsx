@@ -1,12 +1,11 @@
-import React, { ReactNode } from 'react';
-import { StyledContainer } from './styles';
+import { StyledContainer } from './styles'
 
-interface CenterProps {
-  children: ReactNode;
+interface ICenterProps {
+  children: React.ReactNode
 }
 
-const Center: React.FC<CenterProps> = ({ children }: CenterProps) => {
-  return <StyledContainer>{children}</StyledContainer>;
-};
+const Center = ({ children }: ICenterProps) => {
+  return <StyledContainer>{children}</StyledContainer>
+}
 
-export default Center;
+export default Center

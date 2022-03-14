@@ -1,16 +1,16 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react'
 
 /**
  * Stores the previous state or props.
  */
 function usePrevious<T>(state: T): T | undefined {
-  const ref = useRef<T>();
+  const ref = useRef<T>()
 
   useEffect(() => {
-    ref.current = state;
-  });
+    ref.current = state
+  })
 
-  return ref.current;
+  return ref.current
 }
 
-export default usePrevious;
+export default usePrevious
