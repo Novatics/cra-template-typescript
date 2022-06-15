@@ -75,6 +75,40 @@ Para executar os linting:
 | `yarn prettier` | Executa a verificação do Prettier                       |
 | `yarn validate` | Executa a validações dos linters e verificação de Types |
 
+### Commit
+
+Ao finalizar o seu trabalho e tentar executar um commit automaticamente irá rodar o script `yarn validate` e o `yarn test:coverage`,
+sendo este último configurado pelo `coverageThreshold` no arquivo `package.json` e irá impedir que seu commit seja postado até que a cobertura de código
+chegue ao valor mínimo configurado.
+Uma vez validado, seu commit irá passar pelo `commitlint` que irá lhe guiar para que seu commit siga a estrutura definida pelo Conventional Commits de boas práticas em commits. Seu commit irá seguir a seguinte estrutura:
+```
+<tipo>[escopo opcional]: <descrição>
+
+[corpo opcional]
+
+[rodapé(s) opcional(is)]
+```
+Os tipos aceitos são:
+chore: Atualização de tarefas que não ocasionam alteração no código de produção, mas mudanças de ferramentas, mudanças de configuração e bibliotecas.
+feat: São adições de novas funcionalidades ou de quaisquer outras novas implantações ao código.
+fix: Essencialmente definem o tratamento de correções de bugs.
+refactor: Utilizado em quaisquer mudanças que sejam executados no código, porém não alterem a funcionalidade final da tarefa impactada.
+docs: Inclusão ou alteração somente de arquivos de documentação.
+style: Alterações referentes a formatações na apresentação do código que não afetam o significado do código, como por exemplo: espaço em branco, formatação, ponto e vírgula ausente etc.
+test: Adicionando testes ausentes ou corrigindo testes existentes nos processos de testes automatizados (TDD).
+revert: Reverter uma alteração recente.
+wip: Para um commit intermediário, significa trabalho em andamento.
+
+Você não precisa escrever o tipo pois será automaticamente adicionado quando você selecionar o tipo no CLI que vai se abrir.
+
+#### Exemplos de Commits:
+- chore: add commitlint e husky
+- chore(eslint): obrigar o uso de aspas duplas no jsx
+- refactor: refatorando a tipagem
+- feat: add axios / buscando e tratando os dados
+- feat(page/home): criando o roteamentento no next
+
+
 ## 📂 Estrutura do repositório
 
 Nossa estrutura de pastas se organiza dessa forma:

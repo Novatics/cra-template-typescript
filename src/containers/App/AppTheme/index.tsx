@@ -9,8 +9,10 @@ export interface IAppThemeProps {
 const AppTheme = ({ children }: IAppThemeProps) => {
   return (
     <ThemeProvider theme={Theme}>
-      <GlobalStyle />
-      {children}
+      <>
+        <GlobalStyle />
+        {children}
+      </>
     </ThemeProvider>
   )
 }
